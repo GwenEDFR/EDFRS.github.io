@@ -1,0 +1,41 @@
+site_name: KPI monthly report.doc
+site_url: 
+site_author: Gwen ADOLPHE
+
+nav: 
+  - Home: 'index.md'
+  - Users Guide:
+    - Getting started: 'user_guide/Getting_start.md'
+    - Virtual Environment: 'user_guide/virtual_env.md'
+    - Data: 'user_guide/Data.md'
+  - Developer Guide:
+    - Add KPI: 'dev_guide/add_KPI.md'
+    - Add Project: 'dev_guide/add_project.md'
+  - Librairies:
+    - KPI library:
+      - Import KPI: 'KPI_lib/import_KPI.md'
+      - Export KPI: 'KPI_lib/export_KPI.md'
+      - HLZ: 'KPI_lib/HLZ.md'
+      - KPI: 
+        - Basic KPI: 'KPI_lib/KPI_py/BASIC_KPI_class.md'
+        - FCR : 'KPI_lib/KPI_py/FCR_class.md'
+      - Plot KPIs: 'KPI_lib/KPI_plot.md'
+    - PDF Report library: 'PDF_Report_lib/BESS_report.md'
+  - About: 
+    - Release Notes: 'About/release_notes.md'
+    - Issues: 
+      - Library Issues: 'About/Issues/lib_issues.md' 
+    - 404: 'none.md'
+
+theme:
+  name: material
+  custom_dir: custom_theme/
+  font:
+    text: Arial
+  palette: 
+    primary: green
+  # For logo and icon
+  logo: 'image/logo_edf-renewables_WHITE.png'
+  favicon: img/favicon.ico
+
+
