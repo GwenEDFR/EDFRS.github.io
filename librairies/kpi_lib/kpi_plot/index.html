@@ -1,0 +1,2275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Gwen ADOLPHE <gwen.adolphe@edf-re.de>">
+      
+      
+      
+        <link rel="prev" href="../kpi_py/kpi_fig-class/">
+      
+      
+        <link rel="next" href="../../pdf_report_lib/bess_report/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Plot KPIs - KPI monthly report.doc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Arial";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kpi-plot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="KPI monthly report.doc" class="md-header__button md-logo" aria-label="KPI monthly report.doc" data-md-component="logo">
+      
+  <img src="../../../image/logo_edf-renewables_WHITE.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KPI monthly report.doc
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plot KPIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="KPI monthly report.doc" class="md-nav__button md-logo" aria-label="KPI monthly report.doc" data-md-component="logo">
+      
+  <img src="../../../image/logo_edf-renewables_WHITE.png" alt="logo">
+
+    </a>
+    KPI monthly report.doc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Project Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data How it's work ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/Getting_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/virtual_env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/dev_guide/add_kpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add KPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_guide/dev_guide/add_project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add a project in your report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Libraries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    KPI_lib
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            KPI_lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import_kpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import KPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export_kpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export KPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hlz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HLZ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    KPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            KPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpi_py/basic_kpi_class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic KPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpi_py/fcr_class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FCR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpi_py/kpi_fig-class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KPI fig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Plot KPIs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Plot KPIs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      General variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      General methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hex_opacityhex_color-opacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      hex_opacity(hex_color, opacity)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_colorcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_color(color)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-plot_kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class plot_KPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class plot_KPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initself-database-project-year-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      init(self, database, project, year) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze_load_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_load_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_contentself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_content(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_energyself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_energy(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peak_miss_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      peak_miss_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soc_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      soc_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soc_sorted_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      soc_sorted_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_warranty_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_warranty_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_poc_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_poc_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_sorted_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_sorted_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_cycle_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      number_cycle_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      availability_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_kpi_past_year_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary_KPI_past_year_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      overview_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_max_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_max_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_dayself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_day(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_countself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_count(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_energyself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_energy(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period_time_pie_chartself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      period_time_pie_chart(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period_overview_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      period_overview_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PDF_Report_lib
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            PDF_Report_lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf_report_lib/bess_report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BESS Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UI library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            UI library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UI_lib/UI_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UI_lib/UI_project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI for project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Issues
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Issues
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/issues/lib_issues.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/release_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../none.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    404
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      General variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      General methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hex_opacityhex_color-opacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      hex_opacity(hex_color, opacity)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_colorcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_color(color)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-plot_kpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class plot_KPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class plot_KPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initself-database-project-year-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      init(self, database, project, year) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze_load_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_load_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_contentself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_content(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aux_energyself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      aux_energy(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peak_miss_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      peak_miss_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soc_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      soc_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soc_sorted_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      soc_sorted_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_warranty_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_warranty_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_poc_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_poc_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy_sorted_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      energy_sorted_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_cycle_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      number_cycle_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      availability_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_kpi_past_year_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary_KPI_past_year_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview_tableself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      overview_table(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_max_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_max_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_dayself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_day(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_countself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_count(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_energyself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      event_energy(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period_time_pie_chartself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      period_time_pie_chart(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period_overview_plotself-colorblue" class="md-nav__link">
+    <span class="md-ellipsis">
+      period_overview_plot(self, color='blue')
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="kpi-plot">KPI plot</h1>
+<h2 id="dependencies">Dependencies</h2>
+<table>
+<thead>
+<tr>
+<th>Librairies</th>
+<th>version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parameters_project.py (local)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>KPI.py (local)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>2.2.1</td>
+</tr>
+<tr>
+<td>plotly.graph_objects</td>
+<td>5.20.0</td>
+</tr>
+<tr>
+<td>plotly.subplots</td>
+<td>5.20.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>Class create plots from KPIs.py. Use the KPI.py library to generate the data. Normal size of an image 1200x800 px.\
+<strong>class_name</strong> : plot_KPI</p>
+<h2 id="general-variable">General variable</h2>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Hex Code</th>
+<th>Color Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DARK_BLUE</td>
+<td>'#001A70'</td>
+<td><span style="color: #001A70; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>MEDIUM_BLUE</td>
+<td>'#1057C8'</td>
+<td><span style="color: #1057C8; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>LIGHT_BLUE</td>
+<td>'#1089FF'</td>
+<td><span style="color: #1089FF; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>MEDIUM_GREY</td>
+<td>'#666666'</td>
+<td><span style="color: #666666; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>LIGHT_GREY</td>
+<td>'#E0E0E0'</td>
+<td><span style="color: #E0E0E0; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>DARK_GREEN</td>
+<td>'#4F9E30'</td>
+<td><span style="color: #4F9E30; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>MEDIUM_GREEN</td>
+<td>'#88D910'</td>
+<td><span style="color: #88D910; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>LIGHT_GREEN</td>
+<td>'#C0E410'</td>
+<td><span style="color: #C0E410; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>DARK_ORANGE</td>
+<td>'#FE5716'</td>
+<td><span style="color: #FE5716; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>MEDIUM_ORANGE</td>
+<td>'#FF861D'</td>
+<td><span style="color: #FF861D; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>LIGHT_ORANGE</td>
+<td>'#FFB210'</td>
+<td><span style="color: #FFB210; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>BLACK</td>
+<td>'#000000'</td>
+<td><span style="color: #000000; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>DARK_GREY</td>
+<td>'#333333'</td>
+<td><span style="color: #333333; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>TOTAL</td>
+<td>'#2E603F'</td>
+<td><span style="color: #2E603F; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+<tr>
+<td>WARRANTY</td>
+<td>'#813640'</td>
+<td><span style="color: #813640; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>TITLE_FONT_SIZE</strong> = 25
+<strong>TICK_FONT_SIZE</strong> = 20
+<strong>AXIS_FONT_SIZE</strong> = 23
+<strong>TEXT_FONT_SIZE</strong> = 20
+<strong>LEGEND_FONT_SIZE</strong> = 20
+<strong>LEGEND_FONT_SIZE_S</strong> = 15</p>
+<h2 id="general-methods">General methods</h2>
+<h3 id="hex_opacityhex_color-opacity">hex_opacity(hex_color, opacity)</h3>
+<p>Transforms a color with the selected opacity.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>hex_color</code> (str): The hexadecimal color code (e.g., "#RRGGBB").</li>
+<li><code>opacity</code> (float): The opacity value between 0 and 1, where 0 represents the normal color and 1 represents full transparency.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>new_hex_color</code> (str): The new hexadecimal color code with the specified opacity.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python"># Call the hex_opacity function
+result = hex_opacity(&quot;#001A70&quot;, 0.5)
+
+# Print the new hexadecimal color code with opacity
+print(result)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Hex Code</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="color: #001A70; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+<td><span style="color: #7f8cb7; font-size: 20px; display: flex; justify-content: center;">■</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="check_colorcolor">check_color(color)</h3>
+<p>Check if the color selected is available, otherwise raise an error. Verification for each methods in the class plot_KPI. </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>color</code> (str): The str color entered.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>KeyError</code> (error): If str color is not ['blue' or 'orange' or 'green'].</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">import KPI_plot 
+# Call the color_check function
+KPI_plot.check_color('blue')
+&gt;&gt; pass
+# Call the color_check function
+KPI_plot.check_color('Blue')
+&gt;&gt; KeyError (Invalid color, please select color available : 'blue', 'orange', 'green')
+</code></pre>
+<h2 id="class-plot_kpi">Class plot_KPI</h2>
+<h3 id="initself-database-project-year-none"><strong>init</strong>(self, database, project, year) -&gt; None</h3>
+<p>Initialize the import_data class.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>self</code> (self): General information</li>
+<li><code>database</code> (df): Database used for calculation of the KPIs</li>
+<li><code>project</code> (str): The project name.</li>
+<li><code>year</code> (str): The year of the project.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>None</code> (None): No return value.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python"># Create an instance of the class
+obj = plot_KPI(database=database, project=&quot;HYHA&quot;, year=&quot;2024&quot;)
+
+# Access the attributes
+print(&quot;project:&quot;, obj.project)
+print(&quot;year:&quot;, obj.year)
+print(&quot;year_short:&quot;, obj.year_short)
+</code></pre>
+<h3 id="analyze_load_plotself-colorblue">analyze_load_plot(self, color='blue')</h3>
+<p>Module for plot the load curve for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_analyze_load</code> (go.Figure): Figure containing the plot of the load curve</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').analyze_load_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_analyze_load HYHA April 2024" src="../../../image/KPI_plot_example/24_2_context_analyze_load_HYHA.png" /></p>
+<h3 id="aux_plotself-colorblue">aux_plot(self, color='blue')</h3>
+<p>Module for plot the auxiliaries consumption graph for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_aux_cons</code> (go.Figure): Figure contain plot of the auxiliaries consumption</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').aux_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_aux_plot HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_aux_plot_HYHA.png" /></p>
+<h3 id="aux_contentself-colorblue">aux_content(self, color='blue')</h3>
+<p>Module for table the auxiliaries content for a certain project.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_aux_content</code> (go.Figure): Figure contain content on each aux_N</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').fig_aux_content().show()
+# return :
+</code></pre>
+<p><img alt="fig_aux_content HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_aux_content_HYHA.png" /></p>
+<h3 id="aux_energyself-colorblue">aux_energy(self, color='blue')</h3>
+<p>Module for plot energy from the auxiliaries for a certain project.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_ener_aux</code> (go.Figure): Figure contain bar of energy per month</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').aux_energy().show()
+# return :
+</code></pre>
+<p><img alt="fig_ener_aux HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_aux_energy_HYHA.png" /></p>
+<h3 id="peak_miss_tableself-colorblue">peak_miss_table(self, color='blue')</h3>
+<p>Module for plot the table of missed peak for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_peak_miss</code> (go.Figure): Figure contain table of the peak missed. Normally empty.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').peak_miss_table().show()
+# return :
+</code></pre>
+<p><img alt="fig_peak_miss HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_peak_miss_HYHA.png" /></p>
+<h3 id="soc_plotself-colorblue">soc_plot(self, color='blue')</h3>
+<p>Module for plot the graph of average and cumulative SoC for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_soc</code> (go.Figure): Figure contain graph of the SOC</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').soc_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_soc HYHA April 2024" src="../../../image/KPI_plot_example/24_4_warranty_soc_plot_HYHA.png" /></p>
+<h3 id="soc_sorted_plotself-colorblue">soc_sorted_plot(self, color='blue')</h3>
+<p>Module for plot the graph of average, min and max SoC for a certain project for each HLZ period in a month.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_soc_sorted</code> (go.Figure): Figure contain graph of the SOC sorted by type HLZ ('on peak', 'off peak', 'FCR')</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').soc_sorted_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_soc_sorted HYHA April 2024" src="../../../image/KPI_plot_example/24_4_warranty_soc_sorted_HYHA.png" /></p>
+<h3 id="energy_warranty_plotself-colorblue">energy_warranty_plot(self, color='blue')</h3>
+<p>Module for plot the compared value of cumulative energy and warranty cumulative energy.\</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_energy_warranty_poc_month</code> (go.Figure): Figure contain graph of the energy at POC + cumulative energy compared to warranty energy</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').energy_warranty_plot().show()
+# return :
+</code></pre>
+<p><img alt="figure 24_2_Warranty_energy_warranty_HYHA" src="../../../image/KPI_plot_example/24_2_Warranty_b_energy_warranty_HYHA.png" /></p>
+<h3 id="energy_poc_plotself-colorblue">energy_poc_plot(self, color='blue')</h3>
+<p>Module for plot the graph of energy at POC for a certain project in a certain period.\</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_energy_poc_month</code> (go.Figure): Figure contain graph of the energy at POC + cumulative energy compared to warranty energy</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').energy_poc_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_energy_poc_month HYHA April 2024" src="../../../image/KPI_plot_example/24_3_Operation_e_energy_poc_HYHA.png" /></p>
+<h3 id="energy_sorted_plotself-colorblue">energy_sorted_plot(self, color='blue')</h3>
+<p>Module for plot the graph of energy at POC sorted by period for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_energy_poc_month_sorted</code> (go.Figure): Figure contain graph of the energy at POC for each period</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').energy_sorted_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_energy_poc_month_sorted HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_energy_sorted_HYHA.png" /></p>
+<h3 id="number_cycle_plotself-colorblue">number_cycle_plot(self, color='blue')</h3>
+<p>Module for plot the graph of number of cycle for a certain project in a certain period.\
+Cycle Compute with EOL value like : = Energy discharged in a month/EOL.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_number_cycle</code> (go.Figure): Figure contain graph of the number of cycle per period</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').number_cycle_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_number_cycle HYHA April 2024" src="../../../image/KPI_plot_example/24_4_warranty_number_cycle_HYHA.png" /></p>
+<h3 id="availability_plotself-colorblue">availability_plot(self, color='blue')</h3>
+<p>Module for plot the graph of percentage of availability for a certain project in a certain period.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_availability</code> (go.Figure): Figure contain graph of the percentage of availability</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').availability_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_availability HYHA April 2024" src="../../../image/KPI_plot_example/24_3_op_sumup_availability_HYHA.png" /></p>
+<h3 id="summary_kpi_past_year_tableself-colorblue">summary_KPI_past_year_table(self, color='blue')</h3>
+<p>Module for plot the table of summarized KPI from the previous years for a certain project.\
+Data used are stored in excel parameters of the specific project, don't touch here to change it.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_summary</code> (go.Figure): Figure contain table of the KPI summarized</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').summary_KPI_past_year_table().show()
+# return :
+</code></pre>
+<p><img alt="fig_summary HYHA April 2024" src="../../../image/KPI_plot_example/24_1_overview_summary_HYHA.png" /></p>
+<h3 id="overview_tableself-colorblue">overview_table(self, color='blue')</h3>
+<p>Module for plot the table of Overview KPIs and warranty for a certain project.\
+Data used are stored in excel parameters of the specific project, don't touch here to change it.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_overview</code> (go.Figure): Figure contain table of the overviewed KPIs</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').overview_table().show()
+# return :
+</code></pre>
+<p><img alt="fig_overview HYHA April 2024" src="../../../image/KPI_plot_example/24_1_overview_overview_HYHA.png" /></p>
+<h3 id="load_max_plotself-colorblue">load_max_plot(self, color='blue')</h3>
+<p>Module for plot the table of Pmax on/off peak for a certain project.\
+Useful to know if project atipycal or not.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_load_max</code> (go.Figure): Figure contain table of the Pmax on/off peak + atipycal values</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').load_max_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_load_max HYHA April 2024" src="../../../image/KPI_plot_example/24_2_context_load_max_HYHA.png" /></p>
+<h3 id="event_dayself-colorblue">event_day(self, color='blue')</h3>
+<p><strong>FCR method</strong>\
+Module for plot the event days and event days after schedule for a certain project.\
+Useful to know how many day after schedule we do. Warranty to respect.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_event_day</code> (go.Figure): Figure contain plot of event day per month</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').event_day().show()
+# return :
+</code></pre>
+<p><img alt="fig_event_day HYHA April 2024" src="../../../image/KPI_plot_example/24_5_FCR_event_day_HYHA.png" /></p>
+<h3 id="event_countself-colorblue">event_count(self, color='blue')</h3>
+<p><strong>FCR method</strong>\
+Module for plot the number of event charge and discharge for a certain project.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_event</code> (go.Figure): Figure contain plot of number event charge/discharge per month</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').event_count().show()
+# return :
+</code></pre>
+<p><img alt="fig_event HYHA April 2024" src="../../../image/KPI_plot_example/24_5_FCR_event_count_HYHA.png" /></p>
+<h3 id="event_energyself-colorblue">event_energy(self, color='blue')</h3>
+<p><strong>FCR method</strong>\
+Module for plot the energy from a charge or discharge event for a certain project.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_ener_event</code> (go.Figure): Figure contain plot of energy charge and discharge event per month in MWh</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').event_energy().show()
+# return :
+</code></pre>
+<p><img alt="fig_ener_event HYHA April 2024" src="../../../image/KPI_plot_example/24_5_FCR_event_energy_HYHA.png" /></p>
+<h3 id="period_time_pie_chartself-colorblue">period_time_pie_chart(self, color='blue')</h3>
+<p>Module for plot the pie chart of hours for periods in the selected month.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_period</code> (go.Figure): Figure pie chart percentage of period for this month</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').period_time_pie_chart().show()
+# return :
+</code></pre>
+<p><img alt="fig_period HYHA April 2024" src="../../../image/KPI_plot_example/24_3_Operation_g_period_time_HYHA.png" /></p>
+<h3 id="period_overview_plotself-colorblue">period_overview_plot(self, color='blue')</h3>
+<p>Module for plot overview of hours for periods in the selected year.</p>
+<p><strong>Parameter:</strong></p>
+<ul>
+<li>
+<p><code>self</code> (self): General information</p>
+</li>
+<li>
+<p><code>color</code> (str): General color of the plot. Available ['blue', 'orange', 'green']</p>
+</li>
+</ul>
+<p><strong>Return:</strong></p>
+<ul>
+<li><code>fig_period_overview</code> (go.Figure): Figure of the period percentage for this year per month</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">plot_KPI(database, 'HYHA', '2024').period_overview_plot().show()
+# return :
+</code></pre>
+<p><img alt="fig_period_overview HYHA April 2024" src="../../../image/KPI_plot_example/24_1_Overview_c_period_overview_HYHA.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>
