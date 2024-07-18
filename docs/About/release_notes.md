@@ -1,4 +1,5 @@
 # Realeased Notes
+**Not up to date, see directly on the <a href="https://github.com/edf-re-de/Operation_KPI_report/activity" target="_blank">GitHub repository activity</a>**
 ## Version 2.3.0
 **Released the 27 May 2024**<br>
 New version for: 

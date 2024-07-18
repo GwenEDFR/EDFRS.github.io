@@ -1,30 +1,36 @@
 site_name: KPI monthly report.doc
-site_url: 
-site_author: Gwen ADOLPHE
+site_url: 'EDFRS OP Tool doc'
+site_author: Gwen ADOLPHE <gwen.adolphe@edf-re.de>
 
 nav: 
   - Home: 'index.md'
-  - Users Guide:
-    - Getting started: 'user_guide/Getting_start.md'
-    - Virtual Environment: 'user_guide/virtual_env.md'
-    - Data: 'user_guide/Data.md'
-  - Developer Guide:
-    - Add KPI: 'dev_guide/add_KPI.md'
-    - Add Project: 'dev_guide/add_project.md'
-  - Librairies:
-    - KPI library:
-      - Import KPI: 'KPI_lib/import_KPI.md'
-      - Export KPI: 'KPI_lib/export_KPI.md'
-      - HLZ: 'KPI_lib/HLZ.md'
-      - KPI: 
-        - Basic KPI: 'KPI_lib/KPI_py/BASIC_KPI_class.md'
-        - FCR : 'KPI_lib/KPI_py/FCR_class.md'
-      - Plot KPIs: 'KPI_lib/KPI_plot.md'
-    - PDF Report library: 'PDF_Report_lib/BESS_report.md'
-  - About: 
-    - Release Notes: 'About/release_notes.md'
-    - Issues: 
-      - Library Issues: 'About/Issues/lib_issues.md' 
+  - Project Overview:
+    - 'Architecture': 'user_guide/architecture.md'
+    - Data How it's work ?: 'user_guide/Data.md'
+    - Install environment: 'user_guide/Getting_start.md'
+    - Virtual environment: 'user_guide/virtual_env.md'
+    - Developer Guide:
+      - Add KPI: 'user_guide/dev_guide/add_kpi.md'
+      - How to add a project in your report: 'user_guide/dev_guide/add_project.md'
+  - Libraries:
+    - KPI_lib:
+      - Import KPI: 'librairies/kpi_lib/import_kpi.md'
+      - Export KPI: 'librairies/kpi_lib/export_kpi.md'
+      - HLZ: 'librairies/kpi_lib/hlz.md'
+      - KPI:
+        - Basic KPI: 'librairies/kpi_lib/kpi_py/basic_kpi_class.md'
+        - FCR: 'librairies/kpi_lib/kpi_py/fcr_class.md'
+        - KPI fig: 'librairies/kpi_lib/kpi_py/kpi_fig-class.md'
+      - Plot KPIs: 'librairies/kpi_lib/kpi_plot.md'
+    - PDF_Report_lib:
+      - BESS Report: 'librairies/pdf_report_lib/bess_report.md'
+    - UI library:
+      - UI tools: 'librairies/UI_lib/UI_tools.md'
+      - UI for project: 'librairies/UI_lib/UI_project.md'
+  - About:
+    - Issues:
+      - Library Issues: 'About/issues/lib_issues.md'
+    - Release Notes: 'About/release_notes.md' 
     - 404: 'none.md'
 
 theme:
